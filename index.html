@@ -1,153 +1,150 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Hubungi Kami</title>
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script>
-      (function () {
-        emailjs.init("2lnwhNaeiv17mBmF5"); // Ganti dengan public key kamu
-      })();
-    </script>
-    <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hubungi Kami</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("2lnwhNaeiv17mBmF5");
+    })();
+  </script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-      body {
-        font-family: 'Segoe UI', sans-serif;
-        background-color: #f4f6f9;
-        color: #2c3e50;
-        line-height: 1.6;
-        padding: 0 10px;
-      }
+    body {
+      font-family: 'Fredoka', sans-serif;
+      background: linear-gradient(to bottom, #87ceeb 0%, #ffffff 80%);
+      color: #333;
+      line-height: 1.6;
+      padding: 0 10px;
+    }
 
+    header {
+      background: url('https://upload.wikimedia.org/wikipedia/en/e/ee/Toy_Story_logo.svg') no-repeat center top;
+      background-size: contain;
+      padding: 140px 20px 40px;
+      text-align: center;
+      color: #333;
+    }
+
+    header h1 {
+      font-size: 36px;
+      color: #e74c3c;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 18px;
+      color: #2c3e50;
+    }
+
+    .container {
+      max-width: 600px;
+      background: white;
+      padding: 40px 30px;
+      margin: -30px auto 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      border: 3px dashed #f1c40f;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 20px;
+      border: 2px solid #3498db;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+
+    form input:focus,
+    form textarea:focus {
+      border-color: #e67e22;
+      outline: none;
+      background-color: #fdf6e3;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background-color: #f1c40f;
+      border: none;
+      color: #2c3e50;
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #e67e22;
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    @media (max-width: 600px) {
       header {
-        background: linear-gradient(135deg, #3498db, #2980b9);
-        padding: 80px 20px 40px;
-        text-align: center;
-        color: white;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        margin-bottom: 40px; /* Menambahkan jarak antara header dan body */
+        padding-top: 120px;
+        background-size: 200px auto;
       }
 
       header h1 {
-        font-size: 36px;
-        margin-bottom: 10px;
-      }
-
-      header p {
-        font-size: 18px;
-        color: #e3e3e3;
+        font-size: 28px;
       }
 
       .container {
-        max-width: 600px;
-        background: white;
-        padding: 40px 30px;
-        margin: -40px auto 30px;
-        border-radius: 12px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        margin: -20px 20px 30px;
+        padding: 30px 20px;
       }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Kirimkan Pesan Terhadap Pengguna Ini !</h1>
+    <p>Kami senang mendengar kabar dari teman-teman!</p>
+  </header>
 
-      form input,
-      form textarea {
-        width: 100%;
-        padding: 14px;
-        margin-bottom: 20px;
-        border: 1px solid #ccd6e0;
-        border-radius: 8px;
-        font-size: 15px;
-        transition: 0.3s;
-      }
+  <div class="container">
+    <form id="contact-form">
+      <input type="text" name="from_name" placeholder="Nama Anda" required />
+      <input type="email" name="from_email" placeholder="Email Anda" required />
+      <textarea name="message" rows="5" placeholder="Tulis pesan di sini..." required></textarea>
+      <button type="submit">Kirim Pesan 🚀</button>
+    </form>
+  </div>
 
-      form input:focus,
-      form textarea:focus {
-        border-color: #3498db;
-        outline: none;
-        box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
-      }
+  <footer>
+    &copy; 2025 Diffa Algifari Adzsa. Inning basseball ada 9 Saya masih di Inning 2 karena masih ada 7 Inning lagi!
+  </footer>
 
-      button {
-        width: 100%;
-        padding: 14px;
-        background-color: #3498db;
-        border: none;
-        color: white;
-        font-size: 16px;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: 0.3s;
-      }
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
 
-      button:hover {
-        background-color: #2980b9;
-      }
-
-      footer {
-        text-align: center;
-        padding: 20px;
-        font-size: 14px;
-        color: #7f8c8d;
-        margin-top: 40px;
-      }
-
-      @media (max-width: 600px) {
-        header h1 {
-          font-size: 28px;
-        }
-
-        .container {
-          margin: -30px 20px 30px;
-          padding: 30px 20px;
-        }
-
-        footer {
-          font-size: 12px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>Selamat Datang!</h1>
-      <p>Silakan kirim pesan, pertanyaan, atau saran kepada kami melalui formulir di bawah.</p>
-    </header>
-
-    <div class="container">
-      <form id="contact-form">
-        <input type="text" name="from_name" placeholder="Nama Anda" required />
-        <input type="email" name="from_email" placeholder="Email Anda" required />
-        <textarea name="message" rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
-        <button type="submit">Kirim Pesan</button>
-      </form>
-    </div>
-
-    <footer>
-      &copy; 2025 Website Anda. Semua hak dilindungi.
-    </footer>
-
-    <script>
-      document
-        .getElementById('contact-form')
-        .addEventListener('submit', function (e) {
-          e.preventDefault();
-
-          emailjs
-            .sendForm('diffa21', 'dialri21', this)
-            .then(
-              () => {
-                alert('✅ Pesan berhasil dikirim!');
-                this.reset();
-              },
-              (error) => {
-                alert('❌ Gagal mengirim pesan: ' + JSON.stringify(error));
-              }
-            );
+      emailjs.sendForm('diffa21', 'dialri21', this)
+        .then(() => {
+          alert('✅ Pesan berhasil dikirim ke markas Buzz & Woody!');
+          this.reset();
+        }, (error) => {
+          alert('❌ Gagal kirim pesan: ' + JSON.stringify(error));
         });
-    </script>
-  </body>
+    });
+  </script>
+</body>
 </html>
