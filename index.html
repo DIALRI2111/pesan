@@ -1,113 +1,153 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hubungi Kami</title>
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-  <script>
-    (function(){
-      emailjs.init("2lnwhNaeiv17mBmF5"); // Ganti dengan public key kamu
-    })();
-  </script>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f2f6fc;
-      color: #2c3e50;
-    }
-
-    .container {
-      max-width: 600px;
-      margin: 60px auto;
-      background-color: #ffffff;
-      padding: 40px 30px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-    }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 10px;
-      color: #34495e;
-    }
-
-    p.description {
-      text-align: center;
-      margin-bottom: 30px;
-      color: #7f8c8d;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 14px;
-      margin-bottom: 20px;
-      border: 1px solid #ccd6e0;
-      border-radius: 8px;
-      font-size: 15px;
-      transition: border-color 0.3s;
-    }
-
-    input:focus, textarea:focus {
-      border-color: #3498db;
-      outline: none;
-    }
-
-    button {
-      width: 100%;
-      padding: 14px;
-      background-color: #3498db;
-      border: none;
-      color: white;
-      font-size: 16px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    button:hover {
-      background-color: #2980b9;
-    }
-
-    @media (max-width: 600px) {
-      .container {
-        margin: 20px;
-        padding: 30px 20px;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hubungi Kami</title>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("2lnwhNaeiv17mBmF5"); // Ganti dengan public key kamu
+      })();
+    </script>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
       }
-    }
-  </style>
-</head>
-<body>
 
-  <div class="container">
-    <h1>Selamat Datang!</h1>
-    <p class="description">
-      Silakan kirim pesan, pertanyaan, atau saran Anda kepada pemilik website ini.<br>
-      Kami akan merespons melalui email Anda secepat mungkin.
-    </p>
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #f4f6f9;
+        color: #2c3e50;
+        line-height: 1.6;
+        padding: 0 10px;
+      }
 
-    <form id="contact-form">
-      <input type="text" name="from_name" placeholder="Nama Anda" required>
-      <input type="email" name="from_email" placeholder="Email Anda" required>
-      <textarea name="message" rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
-      <button type="submit">Kirim Pesan</button>
-    </form>
-  </div>
+      header {
+        background: linear-gradient(135deg, #3498db, #2980b9);
+        padding: 80px 20px 40px;
+        text-align: center;
+        color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 40px; /* Menambahkan jarak antara header dan body */
+      }
 
-  <script>
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-      e.preventDefault();
+      header h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+      }
 
-      emailjs.sendForm('diffa21', 'dialri21', this)
-        .then(() => {
-          alert('✅ Pesan berhasil dikirim!');
-          this.reset();
-        }, (error) => {
-          alert('❌ Gagal mengirim pesan: ' + JSON.stringify(error));
+      header p {
+        font-size: 18px;
+        color: #e3e3e3;
+      }
+
+      .container {
+        max-width: 600px;
+        background: white;
+        padding: 40px 30px;
+        margin: -40px auto 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      }
+
+      form input,
+      form textarea {
+        width: 100%;
+        padding: 14px;
+        margin-bottom: 20px;
+        border: 1px solid #ccd6e0;
+        border-radius: 8px;
+        font-size: 15px;
+        transition: 0.3s;
+      }
+
+      form input:focus,
+      form textarea:focus {
+        border-color: #3498db;
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+      }
+
+      button {
+        width: 100%;
+        padding: 14px;
+        background-color: #3498db;
+        border: none;
+        color: white;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background-color: #2980b9;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 14px;
+        color: #7f8c8d;
+        margin-top: 40px;
+      }
+
+      @media (max-width: 600px) {
+        header h1 {
+          font-size: 28px;
+        }
+
+        .container {
+          margin: -30px 20px 30px;
+          padding: 30px 20px;
+        }
+
+        footer {
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Selamat Datang!</h1>
+      <p>Silakan kirim pesan, pertanyaan, atau saran kepada kami melalui formulir di bawah.</p>
+    </header>
+
+    <div class="container">
+      <form id="contact-form">
+        <input type="text" name="from_name" placeholder="Nama Anda" required />
+        <input type="email" name="from_email" placeholder="Email Anda" required />
+        <textarea name="message" rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
+        <button type="submit">Kirim Pesan</button>
+      </form>
+    </div>
+
+    <footer>
+      &copy; 2025 Website Anda. Semua hak dilindungi.
+    </footer>
+
+    <script>
+      document
+        .getElementById('contact-form')
+        .addEventListener('submit', function (e) {
+          e.preventDefault();
+
+          emailjs
+            .sendForm('diffa21', 'dialri21', this)
+            .then(
+              () => {
+                alert('✅ Pesan berhasil dikirim!');
+                this.reset();
+              },
+              (error) => {
+                alert('❌ Gagal mengirim pesan: ' + JSON.stringify(error));
+              }
+            );
         });
-    });
-  </script>
-
-</body>
+    </script>
+  </body>
 </html>
