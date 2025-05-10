@@ -1,0 +1,9 @@
+header {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    padding: 80px 20px 40px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px; /* Menambahkan jarak antara header dan body */
+  }
+  
